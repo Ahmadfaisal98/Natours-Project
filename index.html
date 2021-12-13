@@ -9,7 +9,7 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="css/icon-font.css" />
+        <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -114,23 +114,40 @@
                     <div class="col-1-of-2">
                         <div class="composition">
                             <img
-                                src="img/nat-1-large.jpg"
+                                srcset="
+                                    img/nat-1.jpg        300w,
+                                    img/nat-1-large.jpg 1000w
+                                "
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 18.75em"
                                 alt="photo 1"
                                 class="
                                     composition__photo composition__photo--p1
                                 "
-                            /><img
-                                src="img/nat-2-large.jpg "
+                                src="img/nat-1-large.jpg"
+                            />
+                            <img
+                                srcset="
+                                    img/nat-2.jpg        300w,
+                                    img/nat-2-large.jpg 1000w
+                                "
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 18.75em"
                                 alt="photo 2"
                                 class="
                                     composition__photo composition__photo--p2
                                 "
-                            /><img
-                                src="img/nat-3-large.jpg"
+                                src="img/nat-2-large.jpg"
+                            />
+                            <img
+                                srcset="
+                                    img/nat-3.jpg        300w,
+                                    img/nat-3-large.jpg 1000w
+                                "
+                                sizes="(max-width: 56.25em) 200vw, (max-width: 37.5em 30vw, 18.75em"
                                 alt="photo 3"
                                 class="
                                     composition__photo composition__photo--p3
                                 "
+                                src="img/nat-3-large.jpg"
                             />
                         </div>
                     </div>
@@ -361,9 +378,14 @@
                     <div class="story">
                         <figure class="story__shape">
                             <img
-                                src="img/nat-8.jpg"
+                                srcset="
+                                    img/nat-8-small.jpg 1200w,
+                                    img/nat-8.jpg       2000w
+                                "
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 18.75em"
                                 alt="Person on a tour"
                                 class="story__img"
+                                src="img/nat-8.jpg"
                             />
                             <figcaption class="story__caption">
                                 Mary Smith
@@ -389,9 +411,14 @@
                     <div class="story">
                         <figure class="story__shape">
                             <img
-                                src="img/nat-9.jpg"
+                                srcset="
+                                    img/nat-9-small.jpg 1200w,
+                                    img/nat-9.jpg       2000w
+                                "
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 18.75em"
                                 alt="Person on a tour"
                                 class="story__img"
+                                src="img/nat-9.jpg"
                             />
                             <figcaption class="story__caption">
                                 Jack Wilson
@@ -507,11 +534,23 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img
-                    src="img/logo-green-2x.png"
-                    alt="Full logo"
-                    class="footer__logo"
-                />
+                <picture class="footer__logo">
+                    <source
+                        srcset="
+                            img/logo-green-small-1x.png 1x,
+                            img/logo-green-small-2x.png 2x
+                        "
+                        media="(max-width: 37.5em)"
+                        src="img/logo-green-small-2x.png"
+                    />
+                    <img
+                        srcset="
+                            img/logo-green-1x.png 1x,
+                            img/logo-green-2x.png 2x
+                        "
+                        alt="Full logo"
+                    />
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -524,7 +563,7 @@
                                 <a href="#" class="footer__link">Contact us</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#" class="footer__link">Careers</a>
+                                <a href="#" class="footer__link">About</a>
                             </li>
                             <li class="footer__item">
                                 <a href="#" class="footer__link"
@@ -551,14 +590,19 @@
             <div class="popup__content">
                 <div class="popup__left">
                     <img
+                        srcset="img/nat-8-small.jpg 1200w, img/nat-8.jpg 2000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 37.5em"
+                        alt="Tour Photo"
+                        class="popup__img"
                         src="img/nat-8.jpg"
-                        alt="Tour Photo"
-                        class="popup__img"
                     />
+
                     <img
-                        src="img/nat-9.jpg"
+                        srcset="img/nat-9-small.jpg 1200w, img/nat-9.jpg 2000w"
+                        sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em 30vw, 37.5em"
                         alt="Tour Photo"
                         class="popup__img"
+                        src="img/nat-9.jpg"
                     />
                 </div>
 
@@ -578,19 +622,8 @@
                         ratione, tempora iusto earum, amet nobis ipsam eius qui
                         laudantium quisquam omnis neque, ipsum molestiae natus
                         reiciendis consequatur deserunt. Labore alias minus
-                        libero neque ab numquam ratione nisi fugiat aperiam quos
-                        molestiae ad ex eius, quo, accusamus dicta? Dolores,
-                        mollitia labore. Quae magnam accusamus veritatis quis
-                        eligendi. Voluptate inventore cumque labore. Fugiat,
-                        perferendis cupiditate aliquid quam repellendus
-                        aspernatur, ex soluta est distinctio, consequatur quo
-                        ipsa dolore delectus. Ratione, quod cupiditate beatae,
-                        dolorem veritatis iure aliquam ex unde accusantium
-                        necessitatibus reiciendis, nihil ullam earum dolores.
-                        Porro fugiat aperiam beatae, incidunt perferendis dolor
-                        temporibus debitis, repellat eveniet quia iure
-                        repellendus? Consequuntur ipsam obcaecati aperiam, ut
-                        sequi dolorum reiciendis pariatur atque. Iusto minus ab.
+                        libero neque ab numquam ratione nisi fugiat aperiam
+                        quos.
                     </p>
                     <a href="#" class="btn btn--green">Book Now</a>
                 </div>
